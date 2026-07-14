@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Attributes Practice</title>
+   
+</head>
+<body>
+
+    
+    <h1>DOM Attributes Practice</h1>
+    <section id="profileSection">
+        <h2 id="userName" src = "cat.webp">Junaid Gul</h2>
+
+        <img
+            id="profilePhoto"
+            src="profile.avif"
+            alt="Junaid's Profile Picture"
+            width="220"
+        >
+
+        <p id="userRole">Frontend Developer Student</p>
+
+        <a
+            id="portfolioLink"
+            href="https://github.com/"
+            target="_blank"
+        >
+            Visit My Portfolio
+        </a>
+
+        <br><br>
+
+        <button id="editProfileBtn">
+            Edit Profile
+        </button>
+    </section>
+    <hr>
+    <section id="loginSection">
+        <h2>Login</h2>
+
+        <input
+            id="emailInput"
+            type="email"
+            placeholder="Enter your email"
+        >
+
+        <br><br>
+
+        <input
+            id="passwordInput"
+            type="password"
+            placeholder="Enter your password"
+        >
+
+        <br><br>
+
+        <button id="loginBtn" disabled>
+            Login
+        </button>
+    </section>
+    <hr>
+    <section id="courseSection">
+        <h2 id="courseTitle">JavaScript DOM Mastery</h2>
+
+        <img
+            id="courseThumbnail"
+            src="javascript.png"
+            alt="JavaScript Course Thumbnail"
+            width="250"
+        >
+
+        <p id="courseDescription">
+            Learning DOM one concept at a time.
+        </p>
+    </section>
+
+    <hr>
+
+<section id="accountSettings">
+    <h2>Account Settings</h2>
+
+    <label for="displayName">Display Name</label>
+    <br>
+
+    <input
+        id="displayName"
+        type="text"
+        value="Junaid Gul"
+        placeholder="Enter your display name"
+    >
+
+    <br><br>
+
+    <input
+        id="acceptRules"
+        type="checkbox"
+        checked
+    >
+
+    <label for="acceptRules">
+        I accept the website rules
+    </label>
+
+    <br><br>
+
+    <button id="saveChangesBtn" disabled>
+        Save Changes
+    </button>
+</section>
+
+<hr>
+
+<section id="featuredCourse">
+
+    <h2>Featured Course</h2>
+
+    <div
+        id="courseCard"
+        data-course-id="JS-101"
+        data-course-name="JavaScript DOM Mastery"
+        data-instructor="Junaid Gul"
+        data-price="4999"
+        data-level="Intermediate"
+        data-duration="8 Weeks"
+    >
+
+        <h3>JavaScript DOM Mastery</h3>
+
+        <p>
+            Master the DOM from beginner to professional.
+        </p>
+
+        <button id="enrollBtn">
+            Enroll Now
+        </button>
+
+    </div>
+
+</section>
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>
