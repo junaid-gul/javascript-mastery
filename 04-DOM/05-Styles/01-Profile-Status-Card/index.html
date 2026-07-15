@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Status Card</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+      }
+
+      .card {
+        width: 420px;
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 8px;
+      }
+
+      #bio {
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      #status {
+        padding: 10px;
+        border-radius: 8px;
+        background: #ececec;
+        margin-bottom: 25px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      button {
+        padding: 10px 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      button:hover {
+        background-color: seagreen;
+        color: white;
+      }
+      #resetButton {
+        background-color: #6c757d;
+        color: white;
+      }
+
+      #resetButton:hover {
+        background-color: #5a6268;
+      }
+      /* Classes for JavaScript */
+
+      .active {
+        color: seagreen;
+      }
+
+      .success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .btnClicked {
+        background-color: seagreen;
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="profileName">Junaid Gul</h1>
+
+      <p id="bio">Frontend Developer in Training</p>
+
+      <p id="status">Status: Offline</p>
+
+      <div class="buttons">
+        <button id="activateButton">Activate</button>
+        <button id="deactivateButton">Deactivate</button>
+        <button id="toggleBioButton">Hide / Show Bio</button>
+        <button id="resetButton">Reset Profile</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-console.log("JavaScript is working!")
+// console.log("JavaScript is working!")
 // console.log(document)
 // console.log(document.URL)
 // console.log(document.title)

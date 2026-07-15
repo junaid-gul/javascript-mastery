@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styles & Classes</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        padding: 40px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Initial styles */
+
+      h1 {
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      /* Classes for JavaScript practice */
+
+      .completed {
+        color: seagreen;
+      }
+
+      .large-text {
+        font-size: 48px;
+      }
+
+      .rounded {
+        border-radius: 12px;
+      }
+
+      .active {
+        background-color: steelblue;
+        color: white;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .success {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .danger {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+
+      #toggleButton{
+    background-color: steelblue;
+    border-radius: 12px;
+    margin-top: 5px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="dashboardTitle">Project Dashboard</h1>
+
+      <p id="welcomeMessage">Welcome back! Your project is looking good.</p>
+
+      <button id="saveButton">Save Changes</button>
+    </div>
+    <button id="toggleButton">
+        Toggle Success Message
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
