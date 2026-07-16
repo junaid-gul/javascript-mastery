@@ -3,7 +3,6 @@ const protfoliloLink = document.querySelector("#portfolioLink")
 const emailInput = document.querySelector("#emailInput")
 const loginBtn = document.querySelector("#loginBtn")
 
-
 //Lets read the attribute of img whoes id is profilePhoto
 console.log(profilePhoto.getAttribute("src"))
 console.log(profilePhoto.getAttribute("alt"))
@@ -30,12 +29,10 @@ console.log(emailInput.getAttribute("placeholder"))
 //chnage placeholder of email input
 emailInput.setAttribute("placeholder","Man enter your university email")
 
-
 //Add ttile attribut in loginBtn
 loginBtn.setAttribute("title", "Clink to login")
 //remove attribute from login btn
 loginBtn.removeAttribute("disabled")
-
 
 //hasAttribute 
 console.log(profilePhoto.hasAttribute("alt"))
@@ -43,28 +40,22 @@ console.log(profilePhoto.hasAttribute("height"))
 console.log(loginBtn.hasAttribute("disabled"))
 console.log(protfoliloLink.hasAttribute("target"))
 
-
 //DOM Properties vs Attributes Practice
 const displayName = document.querySelector("#displayName")
 const acceptRule = document.querySelector("#acceptRules")
 const savechangesBtn = document.querySelector("#saveChangesBtn")
 
-
-
 console.log(displayName.getAttribute("value"))
 console.log(displayName.value)
-
 displayName.value = "Junaid GUl Fronted Devloper"
 console.log(displayName.getAttribute("value"))
 console.log(displayName.value)
-
 displayName.setAttribute("value", "Junaid")
 console.log(displayName.getAttribute("value"))
 console.log(displayName.value)
 
 console.log(acceptRule.getAttribute("checked"))
 console.log(acceptRule.checked)
-
 acceptRule.checked = false
 console.log(acceptRule.getAttribute("checked"))
 console.log(acceptRule.checked)
@@ -77,23 +68,21 @@ console.log(savechangesBtn.getAttribute("disabled"))
 console.log(savechangesBtn.disabled)
 
 //Custom Attributes (data-*)
+
 const courseCard = document.querySelector("#courseCard")
 
 console.log(courseCard.getAttribute("data-course-id"))
 console.log(courseCard.getAttribute("data-instructor"))
 console.log(courseCard.getAttribute("data-price"))
 console.log(courseCard.getAttribute("data-level"))
-
 courseCard.setAttribute("data-price", "499")
 courseCard.setAttribute("data-level", "intermedite")
-
 console.log(courseCard.getAttribute("data-price"))
 console.log(courseCard.getAttribute("data-level"))
 
 courseCard.setAttribute("data-duration", "08-week")
 console.log(courseCard.getAttribute("data-duration"))
 courseCard.removeAttribute("data-instructor")
-
 
 console.log(courseCard.hasAttribute("data-instructor"))
 console.log(courseCard.hasAttribute("data-price"))
@@ -105,7 +94,6 @@ console.log(courseCard.hasAttribute("data-course-id"))
 const enrollBtn = document.querySelector("#enrollBtn")
 
 console.log(courseCard.dataset)
-
 console.log(courseCard.dataset.courseId)
 console.log(courseCard.dataset.courseName)
 console.log(courseCard.dataset.instructor)
@@ -120,7 +108,5 @@ courseCard.dataset.language = "English"
 
 console.log(courseCard.dataset)
 console.log(courseCard.dataset.language)
-
 delete courseCard.dataset.instructor
-
 console.log(courseCard.dataset)

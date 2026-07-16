@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List Builder</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 500px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    #item-input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 15px;
+    }
+
+    #add-btn {
+      background: #4caf50;
+      color: white;
+    }
+
+    .shopping-list {
+      list-style: none;
+    }
+
+    .shopping-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f7f7f7;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    .item-text {
+      font-size: 16px;
+    }
+
+    .delete-btn {
+      background: crimson;
+      color: white;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+
+    .actions {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .actions button {
+      background: #bba5a5;
+      color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Shopping List Builder</h1>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="item-input"
+        placeholder="Enter item..."
+      >
+
+      <button id="add-btn">
+        Add Item
+      </button>
+    </div>
+
+    <ul id="shopping-list" class="shopping-list">
+
+      <li id="milk" class="shopping-item">
+        <span class="item-text">Milk</span>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li id="bread" class="shopping-item">
+        <span class="item-text">Bread</span>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+      <li id="eggs" class="shopping-item">
+        <span class="item-text">Eggs</span>
+        <button class="delete-btn">Delete</button>
+      </li>
+
+    </ul>
+
+    <div class="actions">
+
+      <button id="duplicate-btn">
+        Duplicate Bread
+      </button>
+
+      <button id="replace-btn">
+        Replace Milk
+      </button>
+
+      <button id="clear-btn">
+        Clear List
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
