@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Traversal Playground</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border:2px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+}
+
+.header{
+    border-bottom:2px solid #ddd;
+    padding-bottom:15px;
+    margin-bottom:20px;
+}
+
+.content{
+    display:flex;
+    gap:20px;
+}
+
+.left,
+.right{
+    flex:1;
+    border:1px solid #ccc;
+    padding:15px;
+    border-radius:8px;
+}
+
+.profile{
+    margin-bottom:15px;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+button{
+    padding:10px 16px;
+    cursor:pointer;
+}
+
+.footer{
+    margin-top:20px;
+    border-top:2px solid #ddd;
+    padding-top:15px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <section class="card">
+
+        <header class="header">
+
+            <h1>John Doe</h1>
+
+            <p>Frontend Developer</p>
+
+        </header>
+
+        <main class="content">
+
+            <div class="left">
+
+                <div class="profile">
+
+                    <img src="https://placehold.co/120x120" alt="">
+
+                    <h2>Profile</h2>
+
+                    <p>Learning JavaScript DOM.</p>
+
+                </div>
+
+                <div class="actions">
+
+                    <button class="follow-btn">Follow</button>
+
+                    <button class="message-btn">Message</button>
+
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <h2>Skills</h2>
+
+                <ul>
+
+                    <li>HTML</li>
+
+                    <li>CSS</li>
+
+                    <li>JavaScript</li>
+
+                </ul>
+
+            </div>
+
+        </main>
+
+        <footer class="footer">
+
+            <small>Copyright 2026</small>
+
+        </footer>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
