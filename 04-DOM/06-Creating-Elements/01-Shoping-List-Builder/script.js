@@ -37,7 +37,6 @@
 //     item.classList.add("shopping-item")
 // })
 
-
 // shoppingList.append(appleItem)
 // shoppingList.prepend(bananaItem)
 // breadItem.before(orangeItem)
@@ -58,9 +57,6 @@ const shoppingItem = document.querySelector("#shopping-item")
 const eggsItem = document.querySelector("#eggs")
 const milkItem = document.querySelector("#milk")
 const breadItem = document.querySelector("#bread")
-
-
-
 
 addBtn.addEventListener("click", function(dets){
     const newItem = document.createElement("li")

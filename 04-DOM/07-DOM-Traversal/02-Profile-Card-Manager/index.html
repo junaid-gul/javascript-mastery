@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Traversal - Profile Card Manager</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed);
+    padding:50px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.profile-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.profile-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    transition:.3s;
+    border:3px solid transparent;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
+}
+
+.profile-cover{
+    height:90px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+}
+
+.profile-content{
+    padding:25px;
+    margin-top:-45px;
+}
+
+.avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    border:5px solid white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    background:#f3f4f6;
+    margin-bottom:18px;
+}
+
+.profile-info h2{
+    margin-bottom:6px;
+    color:#222;
+}
+
+.profile-info p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:999px;
+    background:#ececec;
+    font-weight:bold;
+    margin-bottom:25px;
+}
+
+.button-group{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    border:none;
+    border-radius:8px;
+    padding:11px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.follow-btn{
+    background:#2563eb;
+    color:white;
+}
+
+.follow-btn:hover{
+    background:#1d4ed8;
+}
+
+.message-btn{
+    background:#10b981;
+    color:white;
+}
+
+.message-btn:hover{
+    background:#059669;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+.active{
+    border-color:#2563eb;
+    box-shadow:0 15px 40px rgba(37,99,235,.35);
+}
+
+.footer{
+    margin-top:40px;
+    background:white;
+    border-radius:15px;
+    padding:22px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>👥 Profile Card Manager</h1>
+
+<div class="profile-list">
+
+    <!-- Card 1 -->
+    <article class="profile-card">
+
+        <div class="profile-cover"></div>
+
+        <div class="profile-content">
+
+            <div class="avatar">👨</div>
+
+            <div class="profile-info">
+                <h2>John Doe</h2>
+                <p>Frontend Developer</p>
+            </div>
+
+            <div class="status">🟢 Offline</div>
+
+            <div class="button-group">
+                <button class="follow-btn">Follow</button>
+                <button class="message-btn">Message</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+
+        </div>
+
+    </article>
+
+    <!-- Card 2 -->
+    <article class="profile-card">
+
+        <div class="profile-cover"></div>
+
+        <div class="profile-content">
+
+            <div class="avatar">👩</div>
+
+            <div class="profile-info">
+                <h2>Jane Smith</h2>
+                <p>UI/UX Designer</p>
+            </div>
+
+            <div class="status">🟢 Online</div>
+
+            <div class="button-group">
+                <button class="follow-btn">Follow</button>
+                <button class="message-btn">Message</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+
+        </div>
+
+    </article>
+
+    <!-- Card 3 -->
+    <article class="profile-card">
+
+        <div class="profile-cover"></div>
+
+        <div class="profile-content">
+
+            <div class="avatar">🧑</div>
+
+            <div class="profile-info">
+                <h2>Ali Khan</h2>
+                <p>Backend Developer</p>
+            </div>
+
+            <div class="status">🟡 Busy</div>
+
+            <div class="button-group">
+                <button class="follow-btn">Follow</button>
+                <button class="message-btn">Message</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+<div class="footer">
+    Followers:
+    <span class="followers-count">0</span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

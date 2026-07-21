@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Events Playground</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #333;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    button {
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+      background: royalblue;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+      transition: .2s;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      background: #234fd4;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .box {
+      width: 200px;
+      height: 120px;
+      background: #4caf50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      user-select: none;
+    }
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: tomato;
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .output {
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #eef2ff;
+      min-height: 45px;
+      font-weight: bold;
+    }
+    /* #clickOutput{
+      display: none;
+    } */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .parent {
+      background: #dbeafe;
+      padding: 35px;
+      border-radius: 10px;
+    }
+
+    .child {
+      background: #93c5fd;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .grandchild {
+      background: #3b82f6;
+      color: white;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>JavaScript Events Playground</h1>
+
+  <div class="container">
+
+    <!-- Click Events -->
+    <section class="card">
+      <h2>Click Events</h2>
+
+      <button id="clickBtn">Click Me</button>
+      <button id="doubleBtn">Double Click Me</button>
+
+      <div class="output" id="clickOutput">
+        
+        Clicked <span id="count"></span> time
+      </div>
+    </section>
+
+    <!-- Mouse Events -->
+    <section class="card">
+      <h2>Mouse Events</h2>
+
+      <div class="box" id="mouseBox">
+        Hover Me
+      </div>
+
+      <div class="circle" id="circle"></div>
+
+      <div class="output" id="mouseOutput"></div>
+    </section>
+
+    <!-- Keyboard -->
+    <section class="card">
+      <h2>Keyboard Events</h2>
+
+      <input
+        id="keyboardInput"
+        placeholder="Type something..."
+      >
+
+      <div class="output" id="keyboardOutput"></div>
+    </section>
+
+    <!-- Input -->
+    <section class="card">
+      <h2>Input Events</h2>
+
+      <input
+        id="liveInput"
+        placeholder="Live typing..."
+      >
+
+      <select id="country">
+        <option>Pakistan</option>
+        <option>Turkey</option>
+        <option>Malaysia</option>
+      </select>
+
+      <div class="output" id="inputOutput"></div>
+    </section>
+
+    <!-- Form -->
+    <section class="card">
+      <h2>Form Events</h2>
+
+      <form id="signupForm">
+
+        <input
+          type="text"
+          placeholder="Full Name"
+          id="name"
+        >
+
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+        >
+
+        <button type="submit">
+          Register
+        </button>
+
+      </form>
+
+      <div class="output" id="formOutput"></div>
+    </section>
+
+    <!-- Event Propagation -->
+    <section class="card">
+
+      <h2>Propagation Playground</h2>
+
+      <div class="parent">
+
+        Parent
+
+        <div class="child">
+
+          Child
+
+          <div class="grandchild">
+            Button
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="output" id="propagationOutput"></div>
+
+    </section>
+
+    <!-- Event Delegation -->
+    <section class="card">
+
+      <h2>Event Delegation</h2>
+
+      <ul id="todoList">
+
+        <li>Learn Events</li>
+        <li>Practice Events</li>
+        <li>Master JavaScript</li>
+
+      </ul>
+
+      <button id="addItem">
+        Add Item
+      </button>
+
+      <div class="output" id="delegationOutput"></div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
