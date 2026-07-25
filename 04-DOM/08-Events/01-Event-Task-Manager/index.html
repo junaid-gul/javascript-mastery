@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Task Manager</h1>
+        <p class="subtitle">Practice JavaScript Events</p>
+
+
+        <form id="taskForm">
+
+            <div class="input-box">
+                <input 
+                    id="taskInput"
+                    type="text"
+                    placeholder="What do you want to do?"
+                >
+
+                <button id="addBtn">
+                    Add
+                </button>
+            </div>
+
+        </form>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="label">Total Tasks</span>
+                <span id="totalCount">0</span>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="label">Completed</span>
+                <span id="completedCount">0</span>
+            </div>
+
+        </section>
+
+
+        <ul id="taskList">
+            
+        </ul>
+
+
+        <p id="message"></p>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
