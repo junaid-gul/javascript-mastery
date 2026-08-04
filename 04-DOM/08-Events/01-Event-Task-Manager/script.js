@@ -1,67 +1,74 @@
-const form = document.querySelector("#taskForm")
-const inp = document.querySelector("#taskInput")
-const addBtn = document.querySelector("#addBtn")
+const form = document.querySelector("#taskForm");
+const inp = document.querySelector("#taskInput");
+const addBtn = document.querySelector("#addBtn");
 
-const totalCount = document.querySelector("#totalCount")
-const completeCount = document.querySelector("#completedCount")
+const totalCount = document.querySelector("#totalCount");
+const completeCount = document.querySelector("#completedCount");
 
-const taskList = document.querySelector("#taskList")
-const showMessage = document.querySelector("#message")
+const taskList = document.querySelector("#taskList");
+const showMessage = document.querySelector("#message");
 
-let storetask = 0
-let completedTask = 0
+let storetask = 0;
+let completedTask = 0;
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); 
+  console.log(inp.value);
+  if(inp.value.trim() == ""){
+    showMessage.textContent = "Please enter a task."
+    return
+  }
+  // Create Task
+  const li = document.createElement("li");
+  li.textContent = inp.value;
+  li.classList.add("task");
 
-    e.preventDefault()
+  taskList.append(li);
+  showMessage.textContent = "Task added successfully."
 
-    console.log(inp.value)
+  inp.value = "";
+  
+  storetask++;
+  totalCount.textContent = storetask;
 
-    // Create Task
-    const li = document.createElement("li")
-    li.textContent = inp.value
-    li.classList.add("task")
+  // Complete Button
+  const btn = document.createElement("button");
 
-    taskList.append(li)
+  btn.textContent = "Complete";
+  btn.classList.add("complete");
 
-    inp.value = ""
-    storetask++
-    totalCount.textContent = storetas
+  li.append(btn);
 
-    // Complete Button
-    const btn = document.createElement("button")
+  btn.addEventListener("click", function (e) {
+    btn.textContent = "Completed";
+    btn.disabled = true
+    completedTask++
+    completeCount.textContent = completedTask;
+    showMessage.textContent = "Task completed"
+    // if (!btn.parentElement.classList.contains("completed")) {
+    //   completedTask++;
+    //   completeCount.textContent = completedTask;
+    // }
+    btn.closest(".task").classList.add("completed");
 
-    btn.textContent = "Complete"
-    btn.classList.add("complete")
+  });
+  // Delete Button
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.classList.add("delete");
 
-    li.append(btn)
-    btn.addEventListener("click", function(e) {
+  li.append(deleteBtn);
+  deleteBtn.addEventListener("click", function (e) {
+    deleteBtn.closest(".task").remove();
+    if(btn.parentElement.classList.contains("completed")){
+      completedTask--
+      showMessage.textContent = "Task removed"
+     
+    }
+    storetask--
+    completeCount.textContent = completedTask;
+    totalCount.textContent = storetask;
 
-        btn.textContent = "Completed"
-
-        completedTask++
-
-        completeCount.textContent = completedTask
-
-        btn.closest(".task").classList.add("completed")
-
-    })
-    // Delete Button
-    const deleteBtn = document.createElement("button")
-    deleteBtn.textContent = "Delete"
-    deleteBtn.classList.add("delete")
-
-    li.append(deleteBtn)
-    deleteBtn.addEventListener("click", function(e) {
-
-        deleteBtn.closest(".task").remove()
-        completedTask--
-        completeCount.textContent = completedTask
-
-    })
-
-})
-
-
-
-
+  });
+  console.log(taskList);
+});
