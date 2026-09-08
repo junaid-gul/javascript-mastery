@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Delegation Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>My Todo List</h1>
+
+    <form id="todoForm">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="Enter a task..."
+        autocomplete="off"
+      >
+
+      <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="todoList">
+
+      <li class="todo-item">
+        <span class="task-text">Learn DOM</span>
+
+        <div class="actions">
+          <button class="complete-btn">Complete</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </li>
+
+      <li class="todo-item">
+        <span class="task-text">Practice JavaScript</span>
+
+        <div class="actions">
+          <button class="complete-btn">Complete</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </li>
+
+      <li class="todo-item">
+        <span class="task-text">Build a project</span>
+
+        <div class="actions">
+          <button class="complete-btn">Complete</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </li>
+
+    </ul>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
