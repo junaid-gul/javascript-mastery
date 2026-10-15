@@ -1,4 +1,3 @@
-// Basic arrow function
 const greetUser = () => {
   console.log('Hello, Junaid')
 }
@@ -6,7 +5,6 @@ const greetUser = () => {
 greetUser()
 
 
-// Arrow function with one parameter
 const greetPerson = personName => {
   console.log(`Hello, ${personName}`)
 }
