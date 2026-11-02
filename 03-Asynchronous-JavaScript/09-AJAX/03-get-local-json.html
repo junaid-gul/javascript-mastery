@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Local JSON</title>
+</head>
+<body>
+
+    <h1>My Local JSON Data</h1>
+
+    <button id="loadUsers">Load Users</button>
+
+    <div id="users"></div>
+    <h2>Student data from json file </h2>
+    <button id="std-btn">Load data form student json</button>
+    <div id="std-data"></div>
+    <script>
+        const btn = document.querySelector("#loadUsers")
+        const usersDiv = document.querySelector("#users")
+
+        btn.addEventListener("click", function () {
+
+            const xhr = new XMLHttpRequest()
+
+            xhr.open("GET", "users.json", true)
+
+            xhr.onload = function () {
+
+                if (xhr.status === 200) {
+
+                    const responseObj = JSON.parse(xhr.responseText)
+
+                    for (let i = 0; i < responseObj.users.length; i++) {
+
+                        const h2 = document.createElement("h2")
+                        const p = document.createElement("p")
+                        const city = document.createElement("p")
+
+                        h2.textContent = responseObj.users[i].name
+                        p.textContent = responseObj.users[i].email
+                        city.textContent = responseObj.users[i].city
+
+                        usersDiv.append(h2, p, city)
+                    }
+
+                }
+            }
+
+            xhr.send()
+
+        })
+    </script>
+    <script src="data-ajax.js"></script>
+
+</body>
+</html>

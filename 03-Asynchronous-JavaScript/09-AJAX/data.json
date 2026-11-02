@@ -1,0 +1,8 @@
+{
+    "name": "Junaid",
+    "age": 22,
+    "city": "Peshawar",
+    "department": "Computer Science",
+    "semester": 5,
+    "skills": ["HTML", "CSS", "JavaScript"]
+}

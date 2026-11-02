@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX Practice</title>
+</head>
+<body>
+
+  <h1>AJAX Practice</h1>
+
+  <h1>Users List</h1>
+   <div id="users" style=" font-size: 12px; width: 600px; background-color: bisque; padding: 20px;"></div>
+
+  <script>
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true)
+    xhr.onload = function(){
+        const responseObj = JSON.parse(xhr.responseText)
+        const user = document.querySelector("#users")
+
+        for (let i = 0; i < responseObj.length; i++){
+            const h3 = document.createElement("h3")
+            const p = document.createElement("p")
+            h3.textContent = responseObj[i].name
+            p.textContent = responseObj[i].email
+            user.append(h3)
+            user.append(p)
+        } 
+
+    }
+     xhr.send()
+  </script>
+</body>
+</html>

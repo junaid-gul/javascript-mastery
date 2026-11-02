@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Junaid",
+            "email": "junaid@example.com",
+            "city": "Peshawar"
+        },
+        {
+            "id": 2,
+            "name": "Ali",
+            "email": "ali@example.com",
+            "city": "Islamabad"
+        },
+        {
+            "id": 3,
+            "name": "Ahmed",
+            "email": "ahmed@example.com",
+            "city": "Lahore"
+        }
+    ]
+}
